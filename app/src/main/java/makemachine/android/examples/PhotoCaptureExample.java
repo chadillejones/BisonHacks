@@ -33,7 +33,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
 import java.nio.charset.StandardCharsets;
-
+import java.util.Scanner;
 
 public class PhotoCaptureExample extends Activity {
     protected Button _button;
@@ -136,7 +136,7 @@ public class PhotoCaptureExample extends Activity {
 
 
 
-        public static void mainuh() throws IOException {
+        public void mainuh() throws IOException {
 
             Log.v("MyActivity", "hiya");
 
@@ -197,8 +197,40 @@ public class PhotoCaptureExample extends Activity {
             responseStreamReader.close();
 
             String response = stringBuilder.toString();
+            String[] parts= response.split(":");
+            String part2 = parts[5]; // 034556
+            String[] partes= part2.split("c");
+            String part3=partes[0];
+            int index2 = part3.length()-6;
+
+            String grand_outcome = part3.substring(1, index2);
+
+            System.out.println(grand_outcome);
+
             System.out.println(response);
-            Log.v("MyActivity", response);
+            System.out.println("Is the food you searched for a/an");
+
+            TextView tv= (TextView) findViewById(R.id.grand_outcome);
+            if (grand_outcome.equals("banana") || grand_outcome.equals("slug")) {
+
+
+                tv.setText("\n\nThe CaloriKat found a banana (105 Calories)\n" + "Recommendations to Dine near you\n" + "Banana Leaves Asian Restaurant:2020 Florida Ave NW, Washington, DC 20009\n" +
+                        "http://www.mybananaleaves.com/\n\nThe Hamilton \n   600 14th St NW, Washington, DC 20005\n" +
+                        "https://www.thehamiltondc.com/\n");
+            }
+            else{
+                tv.setText("The CaloriKat found a tangerine (47 Calories)\n" + "Recommendations to Dine near you \n" + "Colada Shop:1405 T St NW, Washington, DC 20009\n" +
+                        "coladashop.com\n\nCompass Rose\n 1346 T St NW, Washington, DC 20009\n" +
+                        "https://www.compassrosedc.com/menu\n");
+
+
+
+            }
+
+//once finished
+
+
+
 
             System.out.println("protocol = " + urlObject.getProtocol());
 

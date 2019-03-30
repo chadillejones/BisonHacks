@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\chad1\\AndroidStudioProjects\\photo_capture\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "C:\\Users\\chad1\\OneDrive\\Desktop\\Chads Documents\\CS\\Google\\Hackathon\\BisonHacks\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\chad1\\AndroidStudioProjects\\photo_capture\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\chad1\\OneDrive\\Desktop\\Chads Documents\\CS\\Google\\Hackathon\\BisonHacks\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "3,2",
                         "startColumns": "4,4",
-                        "startOffsets": "123,55",
+                        "startOffsets": "126,57",
                         "endColumns": "58,67",
-                        "endOffsets": "177,118"
+                        "endOffsets": "180,120"
                     },
                     "to": {
                         "startLines": "2,3",
